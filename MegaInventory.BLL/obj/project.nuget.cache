@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "NJwWJFyrV2pEAj7CNZPnHO6pNle9I1NbTWRrTvU+pHMrSIUt6G1xWwtVs1PNiH5ifkUNC4YwylGx/2LpeYkagA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\bjar00\\source\\repos\\MegaInventory\\MegaInventory.BLL\\MegaInventory.BLL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bjar00\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,4 @@
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.DAL\bin\Debug\netcoreapp3.1\MegaInventory.BLL.dll
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.DAL\obj\Debug\netcoreapp3.1\MegaInventory.DAL.csprojAssemblyReference.cache
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.DAL\obj\Debug\netcoreapp3.1\MegaInventory.DAL.AssemblyInfoInputs.cache
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.DAL\obj\Debug\netcoreapp3.1\MegaInventory.DAL.AssemblyInfo.cs
