@@ -12,7 +12,7 @@ namespace MegaInventory.ShopService.Services.Interface
     {
         Task<IResponse<WarehouseDTO>> AddOrUpdateWarehouse(IRequest<WarehouseDTO> request);
         Task<IResponse<SupplierClientDTO>> AddorUpdateClient(IRequest<SupplierClientDTO> request);
-        Task<IResponse<ProductDTO>> AddOrUpdateProduct(IRequest<ProductDTO> request);
+        Task<IResponse<ProductDTO>> AddProduct(IRequest<ProductDTO> request);
         Task<IResponse<SalesOrderDTO>> AddSalesOrder(IRequest<SalesOrderDTO> request);
     }
 }

@@ -52,3 +52,5 @@ C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.Web\obj\Debug\net5.0\Me
 C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.Web\obj\Debug\net5.0\MegaInventory.Web.genruntimeconfig.cache
 C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.Web\obj\Debug\net5.0\Razor\Views\Warehouse\Create.cshtml.g.cs
 C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.Web\obj\Debug\net5.0\Razor\Views\Client\Create.cshtml.g.cs
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.Web\obj\Debug\net5.0\Razor\Views\Product\Create.cshtml.g.cs
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.Web\obj\Debug\net5.0\Razor\Views\SalesOrder\Create.cshtml.g.cs

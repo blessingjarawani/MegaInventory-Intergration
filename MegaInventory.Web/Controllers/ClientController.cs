@@ -43,7 +43,7 @@ namespace MegaInventory.Web.Controllers
                 var result = await _storeService.AddorUpdateClient(request);
                 if (result.IsSuccess)
                 {
-                    RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Home");
                 }
                 return View();
             }

@@ -10,9 +10,9 @@ namespace MegaInventory.BLL.Shared.Interfaces
 {
     public interface IMegaInventoryRepository
     {
-        Task<SupplierClientDTO> AddorUpdateClient(IRequest<SupplierClientDTO> objectRequest);
-        Task<WarehouseDTO> AddOrUpdateWareHouse(IRequest<WarehouseDTO> objectRequest);
-        Task<ProductDTO> AddOrUpdateProduct(IRequest<ProductDTO> objectRequest);
+        Task<SupplierClientDTO> AddClient(IRequest<SupplierClientDTO> objectRequest);
+        Task<WarehouseDTO> AddWareHouse(IRequest<WarehouseDTO> objectRequest);
+        Task<ProductDTO> AddProduct(IRequest<ProductDTO> objectRequest);
         Task<SalesOrderDTO> AddSalesOrder(IRequest<SalesOrderDTO> objectRequest);
     }
 }

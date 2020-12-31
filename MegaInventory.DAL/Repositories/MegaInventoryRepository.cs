@@ -36,7 +36,7 @@ namespace MegaInventory.DAL.Repositories
         }
 
 
-        public async Task<WarehouseDTO> AddOrUpdateWareHouse(IRequest<WarehouseDTO> objectRequest)
+        public async Task<WarehouseDTO> AddWareHouse(IRequest<WarehouseDTO> objectRequest)
         {
             try
             {
@@ -60,10 +60,10 @@ namespace MegaInventory.DAL.Repositories
 
         private StringContent ReturnStringContent(string json)
         {
-            return new StringContent(json.ToString(), Encoding.UTF8, "application/json");
+            return new StringContent(json, Encoding.UTF8, "application/json");
         }
 
-        public async Task<ProductDTO> AddOrUpdateProduct(IRequest<ProductDTO> objectRequest)
+        public async Task<ProductDTO> AddProduct(IRequest<ProductDTO> objectRequest)
         {
             try
             {
@@ -84,7 +84,7 @@ namespace MegaInventory.DAL.Repositories
 
         }
 
-        public async Task<SupplierClientDTO> AddorUpdateClient(IRequest<SupplierClientDTO> objectRequest)
+        public async Task<SupplierClientDTO> AddClient(IRequest<SupplierClientDTO> objectRequest)
         {
             try
             {

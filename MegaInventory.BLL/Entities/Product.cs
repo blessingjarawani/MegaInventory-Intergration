@@ -18,8 +18,8 @@ namespace MegaInventory.BLL.Entities
         public double ProductPurchasePrice { get; set; }
 
 
-        [JsonProperty("ProductMainSupplierSKU")]
-        public string ProductMainSupplierSku { get; set; }
+        [JsonProperty("ProductSKU")]
+        public string ProductSKU { get; set; }
 
 
     }

@@ -32,8 +32,8 @@ namespace MegaInventory.ShopService.Services
                     return Response<WarehouseDTO>.CreateFail("Invalid Request");
                 }
 
-                var result = await _megaInventoryRepository.AddOrUpdateWareHouse(request);
-                if (result != null || result?.ResponseStatus?.ErrorCode == "0")
+                var result = await _megaInventoryRepository.AddWareHouse(request);
+                if (result != null && result?.ResponseStatus?.ErrorCode == "0")
                 {
                     return Response<WarehouseDTO>.CreateSuccess(result);
                 }
@@ -54,8 +54,8 @@ namespace MegaInventory.ShopService.Services
                     return Response<SupplierClientDTO>.CreateFail("Invalid Request");
                 }
 
-                var result = await _megaInventoryRepository.AddorUpdateClient(request);
-                if (result != null || result?.ResponseStatus?.ErrorCode == "0")
+                var result = await _megaInventoryRepository.AddClient(request);
+                if (result != null && result?.ResponseStatus?.ErrorCode == "0")
                 {
                     return Response<SupplierClientDTO>.CreateSuccess(result);
                 }
@@ -67,7 +67,7 @@ namespace MegaInventory.ShopService.Services
             }
         }
 
-        public async Task<IResponse<ProductDTO>> AddOrUpdateProduct(IRequest<ProductDTO> request)
+        public async Task<IResponse<ProductDTO>> AddProduct(IRequest<ProductDTO> request)
         {
             try
             {
@@ -76,8 +76,8 @@ namespace MegaInventory.ShopService.Services
                     return Response<ProductDTO>.CreateFail("Invalid Request");
                 }
 
-                var result = await _megaInventoryRepository.AddOrUpdateProduct(request);
-                if (result != null || result?.ResponseStatus?.ErrorCode == "0")
+                var result = await _megaInventoryRepository.AddProduct(request);
+                if (result != null && result?.ResponseStatus?.ErrorCode == "0")
                 {
                     return Response<ProductDTO>.CreateSuccess(result);
                 }
@@ -98,7 +98,7 @@ namespace MegaInventory.ShopService.Services
                     return Response<SalesOrderDTO>.CreateFail("Invalid Request");
                 }
                 var result = await _megaInventoryRepository.AddSalesOrder(request);
-                if (result != null || result?.ResponseStatus?.ErrorCode == "0")
+                if (result != null && result?.ResponseStatus?.ErrorCode == "0")
                 {
                     return Response<SalesOrderDTO>.CreateSuccess(result);
                 }

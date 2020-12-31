@@ -37,11 +37,11 @@ namespace MegaInventory.Web.Controllers
                         InventoryLocationName = model.Name
                     }
                 };
-                var request = Request<WarehouseDTO>.CreateRequest(warehouse,ApiKey, Operation.Insert.ToString());
+                var request = Request<WarehouseDTO>.CreateRequest(warehouse,ApiKey, Operation.InsertOrUpdate.ToString());
                 var result = await _storeService.AddOrUpdateWarehouse(request);
                 if (result.IsSuccess)
                 {
-                    RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Home");
                 }
                 return View();
             }
