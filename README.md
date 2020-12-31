@@ -1,5 +1,5 @@
 # MegaInventory-Intergration
-MegaInventory Intergration
+MegaInventory Intergration - Implemented in .Net Core 3.1 and AspCore 5.0
 
 This is a dummy eshop application that allows us to add or update Warehouses, add clients, add products and create a verified sales order using MegaInventory API 
 The project consists 3 layers which are Business logic, Data Access layer and Presentation Layer.
