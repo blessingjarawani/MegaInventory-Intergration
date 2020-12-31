@@ -1,0 +1,9 @@
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.BLL\bin\Debug\netcoreapp3.1\MegaInventory.BLL.deps.json
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.BLL\bin\Debug\netcoreapp3.1\MegaInventory.BLL.dll
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.BLL\bin\Debug\netcoreapp3.1\MegaInventory.BLL.pdb
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.BLL\obj\Debug\netcoreapp3.1\MegaInventory.BLL.csprojAssemblyReference.cache
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.BLL\obj\Debug\netcoreapp3.1\MegaInventory.BLL.AssemblyInfoInputs.cache
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.BLL\obj\Debug\netcoreapp3.1\MegaInventory.BLL.AssemblyInfo.cs
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.BLL\obj\Debug\netcoreapp3.1\MegaInventory.BLL.csproj.CoreCompileInputs.cache
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.BLL\obj\Debug\netcoreapp3.1\MegaInventory.BLL.dll
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.BLL\obj\Debug\netcoreapp3.1\MegaInventory.BLL.pdb

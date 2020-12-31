@@ -1,0 +1,14 @@
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.Service\bin\Debug\netcoreapp3.1\MegaInventory.BLL.dll
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.Service\obj\Debug\netcoreapp3.1\MegaInventory.ShopService.AssemblyInfoInputs.cache
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.Service\obj\Debug\netcoreapp3.1\MegaInventory.ShopService.AssemblyInfo.cs
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.Service\bin\Debug\netcoreapp3.1\MegaInventory.ShopService.deps.json
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.Service\bin\Debug\netcoreapp3.1\MegaInventory.ShopService.dll
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.Service\bin\Debug\netcoreapp3.1\MegaInventory.ShopService.pdb
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.Service\bin\Debug\netcoreapp3.1\MegaInventory.DAL.dll
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.Service\bin\Debug\netcoreapp3.1\MegaInventory.BLL.pdb
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.Service\bin\Debug\netcoreapp3.1\MegaInventory.DAL.pdb
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.Service\obj\Debug\netcoreapp3.1\MegaInventory.ShopService.csprojAssemblyReference.cache
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.Service\obj\Debug\netcoreapp3.1\MegaInventory.ShopService.csproj.CoreCompileInputs.cache
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.Service\obj\Debug\netcoreapp3.1\MegaInventory.ShopService.csproj.CopyComplete
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.Service\obj\Debug\netcoreapp3.1\MegaInventory.ShopService.dll
+C:\Users\bjar00\source\repos\MegaInventory\MegaInventory.Service\obj\Debug\netcoreapp3.1\MegaInventory.ShopService.pdb

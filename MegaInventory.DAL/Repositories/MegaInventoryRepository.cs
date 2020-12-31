@@ -15,7 +15,7 @@ namespace MegaInventory.DAL.Repositories
 {
     public class MegaInventoryRepository : IMegaInventoryRepository
     {
-        private readonly string _httpBaseUrl;
+        private string _httpBaseUrl;
         private HttpClient _httpClient;
         public MegaInventoryRepository(string httpBaseUrl)
         {
@@ -36,13 +36,15 @@ namespace MegaInventory.DAL.Repositories
         }
 
 
-        public async Task<WarehouseDTO> AddOrUpdateWareHouse(IRequest<Warehouse> objectRequest)
+        public async Task<WarehouseDTO> AddOrUpdateWareHouse(IRequest<WarehouseDTO> objectRequest)
         {
             try
             {
                 if (objectRequest == null)
                     return null;
-                var response = await _httpClient.PostAsync("InventoryLocation/InventoryLocationUpdate", objectRequest, new JsonMediaTypeFormatter());
+                var json = JsonConvert.SerializeObject(new { objectRequest.ApiKey, mvInventoryLocation = objectRequest.Object.Warehouse, objectRequest.MvRecordAction });
+
+                var response = await _httpClient.PostAsync("InventoryLocation/InventoryLocationUpdate?", ReturnStringContent(json));
                 if (!response.IsSuccessStatusCode)
                     return null;
                 var result = JsonConvert.DeserializeObject<WarehouseDTO>(response.Content.ReadAsStringAsync().Result);
@@ -56,13 +58,19 @@ namespace MegaInventory.DAL.Repositories
 
         }
 
-        public async Task<ProductDTO> AddOrUpdateProduct(IRequest<Product> objectRequest)
+        private StringContent ReturnStringContent(string json)
+        {
+            return new StringContent(json.ToString(), Encoding.UTF8, "application/json");
+        }
+
+        public async Task<ProductDTO> AddOrUpdateProduct(IRequest<ProductDTO> objectRequest)
         {
             try
             {
                 if (objectRequest == null)
                     return null;
-                var response = await _httpClient.PostAsync("Product/ProductUpdate", objectRequest, new JsonMediaTypeFormatter());
+                var json = JsonConvert.SerializeObject(new { objectRequest.ApiKey, mvProduct = objectRequest.Object.Product, objectRequest.MvRecordAction });
+                var response = await _httpClient.PostAsync("Product/ProductUpdate?", ReturnStringContent(json));
                 if (!response.IsSuccessStatusCode)
                     return null;
                 var result = JsonConvert.DeserializeObject<ProductDTO>(response.Content.ReadAsStringAsync().Result);
@@ -76,13 +84,14 @@ namespace MegaInventory.DAL.Repositories
 
         }
 
-        public async Task<SupplierClientDTO> AddorUpdateClient(IRequest<Product> objectRequest)
+        public async Task<SupplierClientDTO> AddorUpdateClient(IRequest<SupplierClientDTO> objectRequest)
         {
             try
             {
                 if (objectRequest == null)
                     return null;
-                var response = await _httpClient.PostAsync("SupplierClient/SupplierClientUpdate", objectRequest, new JsonMediaTypeFormatter());
+                var json = JsonConvert.SerializeObject(new { objectRequest.ApiKey, mvSupplierClient = objectRequest.Object.SupplierClient, objectRequest.MvRecordAction });
+                var response = await _httpClient.PostAsync("SupplierClient/SupplierClientUpdate?", ReturnStringContent(json));
                 if (!response.IsSuccessStatusCode)
                     return null;
                 var result = JsonConvert.DeserializeObject<SupplierClientDTO>(response.Content.ReadAsStringAsync().Result);
@@ -102,7 +111,8 @@ namespace MegaInventory.DAL.Repositories
             {
                 if (objectRequest == null)
                     return null;
-                var response = await _httpClient.PostAsync("SalesOrder/SalesOrderUpdate", objectRequest, new JsonMediaTypeFormatter());
+                var json = JsonConvert.SerializeObject(new { objectRequest.ApiKey, mvSalesOrder = objectRequest.Object.SalesOrder, objectRequest.MvRecordAction });
+                var response = await _httpClient.PostAsync("SalesOrder/SalesOrderUpdate?", ReturnStringContent(json));
                 if (!response.IsSuccessStatusCode)
                     return null;
                 var result = JsonConvert.DeserializeObject<SalesOrderDTO>(response.Content.ReadAsStringAsync().Result);

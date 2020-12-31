@@ -6,7 +6,7 @@ using System.Text;
 
 namespace MegaInventory.BLL.DTO
 {
-    public class ProductDTO
+    public class ProductDTO : BaseDTO
     {
         [JsonProperty("mvProduct")]
         public Product Product { get; set; }

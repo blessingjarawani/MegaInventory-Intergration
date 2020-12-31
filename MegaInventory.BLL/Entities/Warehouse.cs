@@ -7,9 +7,6 @@ namespace MegaInventory.BLL.Entities
 {
     public class Warehouse
     {
-        [JsonProperty("InventoryLocationID")]
-        public string InventoryLocationId { get; set; }
-
         [JsonProperty("InventoryLocationName")]
         public string InventoryLocationName { get; set; }
 
@@ -19,7 +16,5 @@ namespace MegaInventory.BLL.Entities
         [JsonProperty("InventoryLocationAddress")]
         public string InventoryLocationAddress { get; set; }
 
-        [JsonProperty("InventoryLocationCurrencyCode")]
-        public string InventoryLocationCurrencyCode { get; set; }
     }
 }

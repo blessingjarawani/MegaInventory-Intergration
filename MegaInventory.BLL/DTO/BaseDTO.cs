@@ -7,13 +7,15 @@ namespace MegaInventory.BLL.DTO
 {
     public abstract class BaseDTO
     {
-        public class ResponseStatus
-        {
-            [JsonProperty("ErrorCode")]
-            public string ErrorCode { get; set; }
+        [JsonProperty("ResponseStatus")]
+        public ResponseStatus ResponseStatus { get; set; }
+        [JsonProperty("entityID")]
+        public string EntityId { get; set; }
+    }
+    public class ResponseStatus
+    {
+        [JsonProperty("ErrorCode")]
+        public string ErrorCode { get; set; }
 
-            [JsonProperty("entityID")]
-            public string EntityId { get; set; }
-        }
     }
 }

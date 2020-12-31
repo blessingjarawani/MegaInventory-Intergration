@@ -6,13 +6,12 @@ using System.Text;
 
 namespace MegaInventory.BLL.DTO
 {
+   
     public class WarehouseDTO : BaseDTO
     {
         [JsonProperty("mvInventoryLocation")]
         public Warehouse Warehouse { get; set; }
-
-       
-    }
+}
 
  }
 

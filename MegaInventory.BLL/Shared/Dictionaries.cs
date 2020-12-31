@@ -4,9 +4,9 @@ using System.Text;
 
 namespace MegaInventory.BLL.Shared
 {
-    public class Dictionaries
+    public static class Dictionaries
     {
-        public enum ApiAction
+        public enum Operation
         {
             Insert = 1,
             Update = 2,
