@@ -42,7 +42,19 @@ namespace MegaInventory.DAL.Repositories
             {
                 if (objectRequest == null)
                     return null;
-                var json = JsonConvert.SerializeObject(new { objectRequest.ApiKey, mvInventoryLocation = objectRequest.Object.Warehouse, objectRequest.MvRecordAction });
+                var json = JsonConvert.SerializeObject(
+                    new
+                    {
+                        objectRequest.ApiKey,
+                        mvInventoryLocation =
+                    new
+                    {
+                        objectRequest.Object.Warehouse.InventoryLocationAbbreviation,
+                        objectRequest.Object.Warehouse.InventoryLocationAddress,
+                        objectRequest.Object.Warehouse.InventoryLocationName
+                    },
+                        objectRequest.MvRecordAction
+                    });
 
                 var response = await _httpClient.PostAsync("InventoryLocation/InventoryLocationUpdate?", ReturnStringContent(json));
                 if (!response.IsSuccessStatusCode)
@@ -69,7 +81,19 @@ namespace MegaInventory.DAL.Repositories
             {
                 if (objectRequest == null)
                     return null;
-                var json = JsonConvert.SerializeObject(new { objectRequest.ApiKey, mvProduct = objectRequest.Object.Product, objectRequest.MvRecordAction });
+                var json = JsonConvert.SerializeObject(new
+                {
+                    objectRequest.ApiKey,
+                    mvProduct = new
+                    {
+                        objectRequest.Object.Product.ProductDescription,
+                        objectRequest.Object.Product.ProductPurchasePrice,
+                        objectRequest.Object.Product.ProductSellingPrice,
+                        objectRequest.Object.Product.ProductSKU
+                    }
+                    ,
+                    objectRequest.MvRecordAction
+                });
                 var response = await _httpClient.PostAsync("Product/ProductUpdate?", ReturnStringContent(json));
                 if (!response.IsSuccessStatusCode)
                     return null;
@@ -90,7 +114,19 @@ namespace MegaInventory.DAL.Repositories
             {
                 if (objectRequest == null)
                     return null;
-                var json = JsonConvert.SerializeObject(new { objectRequest.ApiKey, mvSupplierClient = objectRequest.Object.SupplierClient, objectRequest.MvRecordAction });
+                var json = JsonConvert.SerializeObject(new
+                {
+                    objectRequest.ApiKey,
+                    mvSupplierClient = new
+                    {
+                        objectRequest.Object.SupplierClient.SupplierClientBillingAddress,
+                        objectRequest.Object.SupplierClient.SupplierClientEmail,
+                        objectRequest.Object.SupplierClient.SupplierClientName,
+                        objectRequest.Object.SupplierClient.SupplierClientPhone1,
+                        objectRequest.Object.SupplierClient.SupplierClientType
+                    },
+                    objectRequest.MvRecordAction
+                });
                 var response = await _httpClient.PostAsync("SupplierClient/SupplierClientUpdate?", ReturnStringContent(json));
                 if (!response.IsSuccessStatusCode)
                     return null;
@@ -111,7 +147,19 @@ namespace MegaInventory.DAL.Repositories
             {
                 if (objectRequest == null)
                     return null;
-                var json = JsonConvert.SerializeObject(new { objectRequest.ApiKey, mvSalesOrder = objectRequest.Object.SalesOrder, objectRequest.MvRecordAction });
+                var json = JsonConvert.SerializeObject(new
+                {
+                    objectRequest.ApiKey,
+                    mvSalesOrder = new
+                    {
+                        objectRequest.Object.SalesOrder.SalesOrderClientId,
+                        objectRequest.Object.SalesOrder.SalesOrderDetails,
+                        objectRequest.Object.SalesOrder.SalesOrderInventoryLocationID,
+                        objectRequest.Object.SalesOrder.SalesOrderStatus
+
+                    },
+                    objectRequest.MvRecordAction
+                });
                 var response = await _httpClient.PostAsync("SalesOrder/SalesOrderUpdate?", ReturnStringContent(json));
                 if (!response.IsSuccessStatusCode)
                     return null;
