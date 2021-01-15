@@ -5114,6 +5114,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "\\\\itdev\\sites\\NugetPackages": {},
+        "\\\\itdev\\sites\\NugetPackages_Test": {},
         "https://api.nuget.org/v3/index.json": {},
         "https://api.nuget.org/v3/index.json.": {}
       },

@@ -109,5 +109,26 @@ namespace MegaInventory.ShopService.Services
                 return Response<SalesOrderDTO>.CreateFail(ex.Message);
             }
         }
+
+          public async Task<IResponse<PurchaseOrderDTO>> UpdatePurchasesOrder(IRequest<PurchaseOrderDTO> request)
+        {
+            try
+            {
+                if (request == null)
+                {
+                    return Response<PurchaseOrderDTO>.CreateFail("Invalid Request");
+                }
+                var result = await _megaInventoryRepository.UpdatePurchaseOrder(request);
+                if (result != null && result?.ResponseStatus?.ErrorCode == "0")
+                {
+                    return Response<PurchaseOrderDTO>.CreateSuccess(result);
+                }
+                return Response<PurchaseOrderDTO>.CreateFail("Error On Saving Client");
+            }
+            catch (Exception ex)
+            {
+                return Response<PurchaseOrderDTO>.CreateFail(ex.Message);
+            }
+        }
     }
 }

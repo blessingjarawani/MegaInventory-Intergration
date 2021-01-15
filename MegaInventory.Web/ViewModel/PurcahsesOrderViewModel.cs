@@ -6,16 +6,23 @@ using System.Threading.Tasks;
 
 namespace MegaInventory.Web.ViewModel
 {
-    public class ProductViewModel
+    public class PurcahsesOrderViewModel
     {
         [Required]
-        public string SKU { get; set; }
+        public long PurchaseOrderSupplierId { get; set; }
+
         [Required]
-        public string Description { get; set; }
+        public long PurchaseOrderTypeId { get; set; }
         [Required]
-        public double SalePrice { get; set; }
+
+        public long PurchaseOrderInventoryLocationID { get; set; }
+
         [Required]
-        public double PurchasePrice { get; set; }
+
+        public long PurchaseOrderStatus { get; set; }
+
+        [Required]
+        public long PurchaseOrderNo { get; set; }
 
         [Required]
         public string PurchaseOrderRowProductSKU { get; set; }
@@ -27,6 +34,8 @@ namespace MegaInventory.Web.ViewModel
         public string PurchaseOrderRowInvoicedQuantity { get; set; }
         [Required]
         public string PurchaseOrderRowUnitPriceWithoutTaxOrDiscount { get; set; }
+
+
 
     }
 }

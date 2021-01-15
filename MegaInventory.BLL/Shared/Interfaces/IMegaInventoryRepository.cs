@@ -14,5 +14,6 @@ namespace MegaInventory.BLL.Shared.Interfaces
         Task<WarehouseDTO> AddWareHouse(IRequest<WarehouseDTO> objectRequest);
         Task<ProductDTO> AddProduct(IRequest<ProductDTO> objectRequest);
         Task<SalesOrderDTO> AddSalesOrder(IRequest<SalesOrderDTO> objectRequest);
+        Task<PurchaseOrderDTO> UpdatePurchaseOrder(IRequest<PurchaseOrderDTO> objectRequest);
     }
 }

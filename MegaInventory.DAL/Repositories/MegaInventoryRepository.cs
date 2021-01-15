@@ -141,6 +141,41 @@ namespace MegaInventory.DAL.Repositories
 
         }
 
+        public async Task<PurchaseOrderDTO> UpdatePurchaseOrder(IRequest<PurchaseOrderDTO> objectRequest)
+        {
+            try
+            {
+                if (objectRequest == null)
+                    return null;
+                var json = JsonConvert.SerializeObject(new
+                {
+                    objectRequest.ApiKey,
+                    mvPurchaseOrder = new
+                    {
+                        objectRequest.Object.PurchaseOrder.PurchaseOrderInventoryLocationID,
+                        objectRequest.Object.PurchaseOrder.PurchaseOrderNo,
+                        objectRequest.Object.PurchaseOrder.PurchaseOrderStatus,
+                        objectRequest.Object.PurchaseOrder.PurchaseOrderSupplierId,
+                        objectRequest.Object.PurchaseOrder.PurchaseOrderTypeId,
+                        PurchaseOrderDetails = objectRequest.Object.PurchaseOrder.PurchaseOrderDetails,
+                    },
+                    objectRequest.MvRecordAction
+                });
+                var response = await _httpClient.PostAsync("/PurchaseOrder/PurchaseOrderUpdate?", ReturnStringContent(json));
+                if (!response.IsSuccessStatusCode)
+                    return null;
+                var result = JsonConvert.DeserializeObject<PurchaseOrderDTO>(response.Content.ReadAsStringAsync().Result);
+                return result;
+
+
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.GetBaseException().Message);
+                return null;
+            }
+        }
         public async Task<SalesOrderDTO> AddSalesOrder(IRequest<SalesOrderDTO> objectRequest)
         {
             try
